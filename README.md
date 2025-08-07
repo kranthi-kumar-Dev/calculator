@@ -16,12 +16,10 @@ A simple and responsive calculator built with **HTML**, **CSS**, and **JavaScrip
   - `=` to compute result
 - Styled user interface with hover effects
 
-## 🖼️ Preview
-
-![Calculator Screenshot](#)  
-(https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(1).png
-https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(2).png
-https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(3).png
+## 🖼️ Preview 
+![image alt](https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(1).png)
+![image alt](https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(2).png)
+![image alt](https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(3).png)
 
 ## 🚀 Getting Started
 
