@@ -19,7 +19,9 @@ A simple and responsive calculator built with **HTML**, **CSS**, and **JavaScrip
 ## 🖼️ Preview
 
 ![Calculator Screenshot](#)  
-(*Replace this with an actual screenshot if needed*)
+(https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(1).png
+https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(2).png
+https://github.com/kranthi-kumar-Dev/calculator/blob/c9b156732eb79d860234bbd7ef082501bda09810/Screenshot(3).png
 
 ## 🚀 Getting Started
 
