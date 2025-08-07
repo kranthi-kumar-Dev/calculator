@@ -1,153 +1,159 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>calc</title>
-        <style>
-            body{
-                background-color: black;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .bass{
-                background-color: aqua;
-                height: auto;
-                width: 350px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                border-radius: 12px;
-            }
-            .display{
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: start;
-                margin: 15px;
-            }
-            .display-s{
-                height: 70px;
-                width: 320px;
-                background-color: rgb(32, 28, 28);
-                color: aliceblue;
-                border-radius: 9px;
-                font-size: 20px;
-            }
-            button{
-                height: 55px;
-                width: 60px;
-                border-radius: 15px;
-                margin: 11;
-                background-color: rgb(43, 212, 212);
-                color: black;
-            }
-            .kk{
-                height: 55px;
-                width: 60px;
-                border-radius: 15px;
-            }
-            .k4{
-                display: flex;
-                flex-direction: row;
-                justify-content: end;
-                margin-right: 9px;
-            }
-            button:hover {
-                background-color: black;
-                color: white;
-                transition: 0.8s;
-            }
-        </style>
-    </head>
-    <body id="hii" onclick="hi()">
-        <div class="bass">
-            <div class="display">
-                <input type="text" id="dis" class="display-s"/>
-            </div>
-            <div class="buttons">
-                <div>
-                    <button id="dc"  onclick="cc()">c</button>
-                    <button id="d%" value="%" onclick="solve(value)">%</button>
-                    <button id="dbs" onclick="bs()">←</button>
-                    <button id="d/" value="/" onclick="solve(value)">/</button>
-                </div>
-                <div>
-                    <button id="d1" value="7" onclick="solve(value)">7</button>
-                    <button id="d2" value="8" onclick="solve(value)">8</button>
-                    <button id="d3" value="9" onclick="solve(value)">9</button>
-                    <button id="d*" value="*" onclick="solve(value)">*</button>
-                </div>
-                <div>
-                    <button id="d4" value="4" onclick="solve(value)">4</button>
-                    <button id="d5" value="5" onclick="solve(value)">5</button>
-                    <button id="d6" value="6" onclick="solve(value)">6</button>
-                    <button id="d-" value="-" onclick="solve(value)">-</button>
-                </div>
-                <div>
-                    <button id="d7" value="1" onclick="solve(value)">1</button>
-                    <button id="d8" value="2" onclick="solve(value)">2</button>
-                    <button id="d9" value="3" onclick="solve(value)">3</button>
-                    <button id="d+" value="+" onclick="solve(value)">+</button>
-                </div>
-                <div>
-                    <button id="d00" value="00" onclick="solve(value)">00</button>
-                    <button id="d0" value="0" onclick="solve(value)">0</button>
-                    <button id="d." value="." onclick="solve(value)">.</button>
-                    <button id="d=" onclick="result()">=</button>
-                </div>
-            </div>
-        </div>
-        <script>
-            var v = document.getElementById("dis");
-            v.focus();
-            function solve(val){
-                var v = document.getElementById("dis");
-                v.value += val;
-            }
-            function bs(){
-                var v = document.getElementById("dis");
-                v.value = v.value.slice(0,-1);
-            }
-            function cc(){
-                var v = document.getElementById("dis");
-                v.value = '';
-            }
-            function result(){
-                var v = document.getElementById("dis");
-                num1 = v.value;
-                num2 = eval(num1);
-                v.value = num2;
-            }
-            var v = document.getElementById("dis");
-            document.addEventListener('keydown' , (ev)=> {
-                var name = event.key;
-                var code = event.keyCode;
-                console.log(name);
-                console.log(code);
-                if (code >= 48 && code<= 57 ){
-                    solve(name);
-                    console.log("act");
-                }
-                else if(code === 8){
-                    bs();
-                    console.log("backspace");
-                } 
-                else if(code === 46){
-                    cc();
-                    console.log("delete");
-                }
-                else if(code === 13 || name === "="){
-                    result();
-                    console.log("result");
-                }
-                else if(name === "-" || name === "+" || name === "*" || name === "/"){
-                    solve(name);
-                    console.log("key")
-                }
-                else{
-                    console.log("false");
-                }
-            });
-        </script>
-    </body>
+<head>
+  <title>Responsive Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .bass {
+      background-color: aqua;
+      width: 90%;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .display {
+      margin-bottom: 15px;
+    }
+    .display-s {
+      height: 70px;
+      width: 100%;
+      background-color: rgb(32, 28, 28);
+      color: aliceblue;
+      border-radius: 9px;
+      font-size: 1.5rem;
+      padding: 10px;
+      border: none;
+    }
+    button {
+      height: 55px;
+      width: 22%;
+      border-radius: 15px;
+      margin: 1.5%;
+      background-color: rgb(43, 212, 212);
+      color: black;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    .buttons div {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    button:hover {
+      background-color: black;
+      color: white;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 500px) {
+      .display-s {
+        font-size: 1.2rem;
+      }
+      button {
+        height: 50px;
+        width: 22%;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      button {
+        height: 45px;
+        width: 22%;
+        font-size: 0.8rem;
+        margin: 1%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bass">
+    <div class="display">
+      <input type="text" id="dis" class="display-s" readonly />
+    </div>
+    <div class="buttons">
+      <div>
+        <button onclick="cc()">C</button>
+        <button value="%" onclick="solve(value)">%</button>
+        <button onclick="bs()">←</button>
+        <button value="/" onclick="solve(value)">/</button>
+      </div>
+      <div>
+        <button value="7" onclick="solve(value)">7</button>
+        <button value="8" onclick="solve(value)">8</button>
+        <button value="9" onclick="solve(value)">9</button>
+        <button value="*" onclick="solve(value)">*</button>
+      </div>
+      <div>
+        <button value="4" onclick="solve(value)">4</button>
+        <button value="5" onclick="solve(value)">5</button>
+        <button value="6" onclick="solve(value)">6</button>
+        <button value="-" onclick="solve(value)">-</button>
+      </div>
+      <div>
+        <button value="1" onclick="solve(value)">1</button>
+        <button value="2" onclick="solve(value)">2</button>
+        <button value="3" onclick="solve(value)">3</button>
+        <button value="+" onclick="solve(value)">+</button>
+      </div>
+      <div>
+        <button value="00" onclick="solve(value)">00</button>
+        <button value="0" onclick="solve(value)">0</button>
+        <button value="." onclick="solve(value)">.</button>
+        <button onclick="result()">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var v = document.getElementById("dis");
+
+    function solve(val) {
+      v.value += val;
+    }
+
+    function bs() {
+      v.value = v.value.slice(0, -1);
+    }
+
+    function cc() {
+      v.value = '';
+    }
+
+    function result() {
+      try {
+        v.value = eval(v.value);
+      } catch {
+        v.value = "Error";
+      }
+    }
+
+    document.addEventListener('keydown', (event) => {
+      let key = event.key;
+      if (!isNaN(key) || "+-*/.".includes(key)) {
+        solve(key);
+      } else if (key === "Enter" || key === "=") {
+        result();
+      } else if (key === "Backspace") {
+        bs();
+      } else if (key === "Delete") {
+        cc();
+      }
+    });
+  </script>
+</body>
 </html>
