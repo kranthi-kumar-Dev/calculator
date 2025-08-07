@@ -28,3 +28,6 @@ A simple and responsive calculator built with **HTML**, **CSS**, and **JavaScrip
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
+2. open the link :
+   https://calculator-eight-teal-68.vercel.app/
+
